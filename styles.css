@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600&family=Potta+One&display=swap');
+
+body {
+    background-image: linear-gradient(to right, rgb(201, 135, 49) , rgb(37, 81, 226));
+}
+
+.container {
+    display: grid;
+    place-items: center;;
+    grid-row-gap: 20px;
+    justify-items: center;
+    padding-top: 200px;
+}
+.header {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 80px;
+    color: rgba(255,255,255,0.4);
+}
+.container .con, .botones input {
+    display:grid;
+    place-items:center;
+}
+.botones {
+    padding-right: 30px;
+}
+.botones > input {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: rgb(37, 81, 226);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+@media(max-width: 768px){
+    .container .header,
+    .container, .container .botones,
+    .container .con{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1f;
+        place-items: center;
+    }
+    .header {
+        font-size: 40px;
+    }
+    .botones > input{
+        padding: 5px 15px;
+    }
+}
+
